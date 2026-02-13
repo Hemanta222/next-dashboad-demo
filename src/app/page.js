@@ -1,9 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+      <Image alt="Landing image" src="/hero-desktop.png" width={1500} height={760} className="hidden md:block"/>
+      <Image alt="Landing image" src="/hero-mobile.png" width={560} height={620} className="md:hidden"/>
+
+      {/* <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -59,7 +63,12 @@ export default function Home() {
             Documentation
           </a>
         </div>
-      </main>
+        <div>
+          <Link href="/settings" className="text-blue-500 hover:underline">
+            View Settings
+          </Link>
+        </div>
+      </main> */}
     </div>
   );
 }
